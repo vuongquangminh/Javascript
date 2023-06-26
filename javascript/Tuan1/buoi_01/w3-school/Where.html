@@ -1,0 +1,48 @@
+<!-- Có 3 cách thêm thẻ <script> -->
+
+    <!-- Cách 1 link ở trong thẻ <head> -->
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+</head>
+<body>
+<h2>Demo JavaScript in Head</h2>
+
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+</body>
+</html>
+
+
+
+    <!-- Cách 2 link ở trong thẻ <body> -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo JavaScript in Body</h2>
+
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!-- Cách 3 link từ tệp .js bên ngoài -->
+<script src="myScript.js"></script>

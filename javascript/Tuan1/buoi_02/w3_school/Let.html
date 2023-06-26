@@ -1,0 +1,43 @@
+<!-- 
+
+Từ letkhóa đã được giới thiệu trong ES6 (2015) .
+Các biến được xác định bằng let không thể được khai báo lại .
+    VD: 
+        let x = "John Doe";
+        let x = 0;
+Các biến được định nghĩa bằng let phải được khai báo trước khi sử dụng .
+     VD: 
+
+Các biến được định nghĩa với let phạm vi khối .
+    VD: 
+        let x = 10;
+        // Here x is 10
+
+        {
+        let x = 2;
+        // Here x is 2
+        }
+
+        // Here x is 10
+
+Với let, KHÔNG được phép khai báo lại một biến trong cùng một khối:
+    VD:
+        var x = 2;   // Allowed
+        let x = 3;   // Not allowed
+
+        {
+        let x = 2;   // Allowed
+        let x = 3;   // Not allowed
+        }
+
+        {
+        let x = 2;   // Allowed
+        var x = 3;   // Not allowed
+        }
+
+Các biến được xác định bằng letcũng được nâng lên đầu khối, nhưng không được khởi tạo.
+Ý nghĩa: Sử dụng một letbiến trước khi nó được khai báo sẽ dẫn đến ReferenceError:
+        VD: 
+            carName = "Saab";
+            let carName = "Volvo";
+ -->

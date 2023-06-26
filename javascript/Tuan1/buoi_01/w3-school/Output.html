@@ -1,0 +1,33 @@
+<!-- Sử dụng InternalHTML -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+</body>
+</html>
+
+<!-- Sử dụng tài liệu.write()    Sử dụng document.write() sau khi tài liệu HTML được tải, sẽ xóa tất cả HTML hiện có : -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<button type="button" onclick="document.write(5 + 6)">Try it</button>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- 
+    Phương thức addEventListener()
+
+    cú pháp
+    element.addEventListener(event, function, useCapture);
+    VD:
+    document.getElementById("myBtn").addEventListener("click", displayDate);
+
+
+    Thêm nhiều trình xử lý sự kiện vào cùng một phần tử
+Phương thức này addEventListener()cho phép bạn thêm nhiều sự kiện vào cùng một phần tử mà không ghi đè lên các sự kiện hiện có:
+
+Ví dụ
+element.addEventListener("click", myFunction);
+element.addEventListener("click", mySecondFunction);
+
+
+Bong bóng sự kiện hay Chụp sự kiện?
+
+addEventListener(event, function, useCapture);
+
+Giá trị mặc định là sai, giá trị này sẽ sử dụng quá trình lan truyền bong bóng, khi giá trị được đặt thành true, sự kiện sẽ sử dụng quá trình lan truyền bắt giữ.
+
+Ví dụ
+document.getElementById("myP").addEventListener("click", myFunction, true);
+document.getElementById("myDiv").addEventListener("click", myFunction, true);
+
+
+Phương thức removeEventListener()
+Phương thức này removeEventListener()loại bỏ các trình xử lý sự kiện đã được đính kèm với phương thức addEventListener():
+
+Ví dụ
+element.removeEventListener("mousemove", myFunction);
+ -->

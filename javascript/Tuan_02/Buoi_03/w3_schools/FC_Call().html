@@ -1,0 +1,43 @@
+<!-- 
+    The JavaScript call() Method
+        Nó có thể được sử dụng để gọi (gọi) một phương thức với đối tượng chủ sở hữu làm đối số (tham số).
+        Với call(), một đối tượng có thể sử dụng một phương thức thuộc về một đối tượng khác.
+        VD:
+            Ví dụ này gọi phương thức fullName của person, sử dụng nó trên person1 :
+                const person = {
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+                }
+                const person1 = {
+                    firstName:"John",
+                    lastName: "Doe"
+                }
+                const person2 = {
+                    firstName:"Mary",
+                    lastName: "Doe"
+                }
+
+                // This will return "John Doe":
+                person.fullName.call(person1);
+                //Ví dụ này gọi phương thức fullName của person, sử dụng nó trên person2 :
+                    // This will return "Mary Doe"
+                    person.fullName.call(person2);
+
+
+    Phương call()thức có thể chấp nhận các đối số:
+        VD:
+            const person = {
+            fullName: function(city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+            }
+
+            const person1 = {
+                firstName:"John",
+                lastName: "Doe"
+            }
+
+            person.fullName.call(person1, "Oslo", "Norway");
+
+ -->

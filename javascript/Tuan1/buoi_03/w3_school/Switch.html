@@ -1,0 +1,49 @@
+<!-- 
+=> Câu lệnh switch  được sử dụng để thực hiện các hành động khác nhau dựa trên các điều kiện khác nhau.
+        Biểu thức chuyển đổi được đánh giá một lần.
+        Giá trị của biểu thức được so sánh với các giá trị của từng trường hợp.
+        Nếu khớp, khối mã liên quan sẽ được thực thi.
+        Nếu không khớp, khối mã default sẽ được thực thi.
+
+    VD:
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+        }
+
+        Khi JavaScript tiếp cận một break từ khóa, nó sẽ thoát ra khỏi khối chuyển đổi.
+        Điều này sẽ dừng thực thi bên trong khối chuyển đổi.
+        Không cần thiết phải ngắt trường hợp cuối cùng trong khối chuyển đổi. Khối bị phá vỡ (kết thúc) ở đó.
+
+=> Từ khóa default
+    defaultkhông nhất thiết phải là trường hợp cuối cùng trong khối chuyển đổi:
+        VD: 
+            switch (new Date().getDay()) {
+                default:
+                    text = "Looking forward to the Weekend";
+                    break;
+                case 6:
+                    text = "Today is Saturday";
+                    break;
+                case 0:
+                    text = "Today is Sunday";
+            }
+ -->

@@ -1,0 +1,48 @@
+<!-- 
+Biến là nơi lưu trữ dữ liệu
+Biến JavaScript có thể được khai báo theo 4 cách:
+
+tự động
+sử dụng var:
+    var x = 5;
+    var y = 6;
+    var z = x + y;
+sử dụng let:
+    let x = 5;
+    let y = 6;
+    let z = x + y;
+sử dụng const:
+    const x = 5;
+    const y = 6;
+    const z = x + y;
+
+Ví dụ hỗn hợp
+    const price1 = 5;
+    const price2 = 6;
+    let total = price1 + price2;
+
+    Hai biến price1và price2 được khai báo với consttừ khóa.
+    Đây là những giá trị không đổi và không thể thay đổi.
+    Biến totalđược khai báo với lettừ khóa.
+    Giá trị totalcó thể được thay đổi.
+
+Khi nào nên sử dụng var, let hoặc const?
+    1. Luôn khai báo biến
+    2. Luôn sử dụng const nếu không nên thay đổi giá trị
+    3. Luôn sử dụng const nếu không nên thay đổi loại (Mảng và Đối tượng)
+    4. Chỉ dùng let nếu không dùng được const
+    5. Chỉ sử dụng var nếu bạn PHẢI hỗ trợ các trình duyệt cũ.
+
+Bạn không thể khai báo lại một biến được khai báo bằng lethoặc const.
+Điều này sẽ không hoạt động:
+    let carName = "Volvo";
+    let carName;
+
+Định danh JavaScript
+    Tên có thể chứa các chữ cái, chữ số, dấu gạch dưới và ký hiệu đô la.
+    Tên phải bắt đầu bằng một chữ cái.
+    Tên cũng có thể bắt đầu bằng $ và _ (nhưng chúng tôi sẽ không sử dụng nó trong hướng dẫn này). :    let $ = "Hello World";  let _lastName = "Johnson";
+    Tên phân biệt chữ hoa chữ thường (y và Y là các biến khác nhau).
+    Không thể sử dụng các từ dành riêng (như từ khóa JavaScript) làm tên.
+
+ -->

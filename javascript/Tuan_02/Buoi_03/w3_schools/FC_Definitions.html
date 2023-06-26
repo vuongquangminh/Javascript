@@ -1,0 +1,68 @@
+<!-- 
+
+    Định nghĩa hàm JavaScript
+
+    Các hàm JavaScript được xác định bằng functiontừ khóa.
+
+    Bạn có thể sử dụng khai báo hàm hoặc biểu thức hàm .
+
+    Function Declarations
+        VD :
+            function functionName(parameters) {
+            // code to be executed
+            }
+
+    Function Expressions
+    VD :
+        const x = function (a, b) {return a * b};
+        (Chức năng trên thực sự là một chức năng ẩn danh (một chức năng không có tên). Các hàm được lưu trữ trong các biến không cần tên hàm. Chúng luôn được gọi (được gọi) bằng cách sử dụng tên biến.)
+    
+
+    Function Hoisting
+        Hoisting áp dụng cho khai báo biến và khai báo hàm. Do đó, các hàm JavaScript có thể được gọi trước khi chúng được khai báo:
+            VD:
+                myFunction(5);
+
+                function myFunction(y) {
+                return y * y;
+                }
+
+
+
+    Chức năng tự gọi
+        VD: 
+                (function () {
+                    let x = "Hello!!";  // I will invoke myself
+                })();
+
+    Functions Can Be Used as Values
+        VD:
+            function myFunction(a, b) {
+                    return a * b;
+            }
+
+            let x = myFunction(4, 3)*2;
+
+    Functions are Objects
+        VD: 
+            function myFunction(a, b) {
+                return a * b;
+            }
+
+            let text = myFunction.toString();
+
+
+    Arrow Functions
+        VD:
+            // ES5
+            var x = function(x, y) {
+            return x * y;
+            }
+
+            // ES6
+            const x = (x, y) => x * y;
+
+
+
+
+    -->

@@ -1,0 +1,121 @@
+<!-- 
+
+Các biến được xác định bằng const không thể được khai báo lại.
+Các biến được xác định bằng const không thể được gán lại.
+Các biến được xác định constcó Phạm vi khối.
+
+
+Các biến JavaScript const phải được gán một giá trị khi chúng được khai báo: const PI = 3.14159265359;
+    VD: Không đúng
+        const PI;
+        PI = 3.14159265359;
+
+Khi nào nên sử dụng JavaScript const?
+Luôn khai báo một biến với const khi bạn biết rằng giá trị không nên thay đổi.
+
+Sử dụng const khi bạn khai báo:
+
+    Một mảng mới
+    Đối tượng mới
+    Một chức năng mới
+    Một RegExp mới
+
+Vì điều này, bạn KHÔNG thể:
+
+Gán lại một giá trị không đổi
+Gán lại một mảng không đổi
+Gán lại một đối tượng không đổi
+Nhưng bạn CÓ THỂ:
+
+Thay đổi các phần tử của mảng hằng
+Thay đổi thuộc tính của đối tượng hằng
+
+
+
+------------------------------MẢNG KHÔNG ĐỔI------------------------------
+Bạn có thể thay đổi các phần tử của một mảng cố định:
+VD: 
+    // You can create a constant array:
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    // You can change an element:
+    cars[0] = "Toyota";
+
+    // You can add an element:
+    cars.push("Audi");
+
+VD ERROR :
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+
+
+----------------------------ĐỐI TƯỢNG KHÔNG ĐỔI----------------------------
+Bạn có thể thay đổi các phần tử của một mảng cố định:
+
+    Ví dụ
+        // You can create a constant array:
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        // You can change an element:
+        cars[0] = "Toyota";
+
+        // You can add an element:
+        cars.push("Audi");
+
+Nhưng bạn KHÔNG thể gán lại mảng:
+
+    Ví dụ
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+
+
+
+----------------------------------------ĐỐI TƯỢNG KHÔNG ĐỔI---------------------
+Bạn có thể thay đổi các thuộc tính của một đối tượng không đổi:
+
+    Ví dụ
+        // You can create a const object:
+        const car = {type:"Fiat", model:"500", color:"white"};
+
+        // You can change a property:
+        car.color = "red";
+
+        // You can add a property:
+        car.owner = "Johnson";
+
+Nhưng bạn KHÔNG thể gán lại đối tượng:
+
+    Ví dụ
+        const car = {type:"Fiat", model:"500", color:"white"};
+
+        car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
+
+Không được phép khai báo lại một biến hiện có varhoặc let biến thành const, trong cùng phạm vi:
+    VD: 
+        var x = 2;     // Allowed
+        const x = 2;   // Not allowed
+
+        {
+        let x = 2;     // Allowed
+        const x = 2;   // Not allowed
+        }
+
+        {
+        const x = 2;   // Allowed
+        const x = 2;   // Not allowed
+        }
+
+
+Các biến được xác định bằng constcũng được đưa lên đầu, nhưng không được khởi tạo.
+
+Ý nghĩa: Sử dụng một constbiến trước khi nó được khai báo sẽ dẫn đến ReferenceError:
+    VD: 
+        alert (carName);
+        const carName = "Volvo";
+
+
+
+
+ -->

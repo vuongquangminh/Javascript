@@ -1,0 +1,50 @@
+<!-- 
+    Thay vì viết:
+        text += cars[0] + "<br>";
+        text += cars[1] + "<br>";
+        text += cars[2] + "<br>";
+        text += cars[3] + "<br>";
+        text += cars[4] + "<br>";
+        text += cars[5] + "<br>";
+    Bạn có thể viết:
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        }
+    Và bạn có thể bỏ qua biểu thức 1 (như khi các giá trị của bạn được đặt trước khi vòng lặp bắt đầu):
+        Ví dụ
+            let i = 2;
+            let len = cars.length;
+            let text = "";
+            for (; i < len; i++) {
+                text += cars[i] + "<br>";
+            }
+    Biểu thức 3 cũng có thể được bỏ qua (như khi bạn tăng các giá trị của mình bên trong vòng lặp):
+        let i = 0;
+        let len = cars.length;
+        let text = "";
+        for (; i < len; ) {
+            text += cars[i] + "<br>";
+            i++;
+        }
+    Phạm vi vòng lặp
+        Sử dụng vartrong một vòng lặp:
+
+        Ví dụ
+            var i = 5;
+
+            for (var i = 0; i < 10; i++) {
+                // some code 
+            }
+
+            // Here i is 10 bởi vì khi tăng giá trị i lên 10 thì nó kh thực hiên đươcj vòng for và lúc đo i đã băng 10 rồi
+        Sử dụng lettrong một vòng lặp:
+
+        Ví dụ
+            let i = 5;
+
+            for (let i = 0; i < 10; i++) {
+                // some code
+            }
+
+            s// Here i is 5
+ -->

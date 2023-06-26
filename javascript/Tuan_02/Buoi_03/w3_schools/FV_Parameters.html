@@ -1,0 +1,64 @@
+<!-- 
+
+    JavaScript functionkhông thực hiện bất kỳ kiểm tra nào đối với các giá trị tham số (đối số).
+
+    Các tham số và đối số của hàm
+
+        VD: 
+            function functionName(parameter1, parameter2, parameter3) {
+            // code to be executed
+            }
+
+
+    Thông số mặc định : Nếu một hàm được gọi với các đối số bị thiếu (ít hơn so với khai báo), các giá trị bị thiếu sẽ được đặt thành undefined.
+        Đôi khi điều này được chấp nhận, nhưng đôi khi tốt hơn là gán giá trị mặc định cho tham số:
+            VD:
+                function myFunction(x, y) {
+                if (y === undefined) {
+                    y = 2;
+                }  
+                return x * y;
+                }
+                document.getElementById("demo").innerHTML = myFunction(4);
+
+    Giá trị tham số mặc định
+            VD:
+                Nếu y không được thông qua hoặc không xác định, thì y = 10.
+
+                function myFunction(x, y = 10) {
+                return x + y;
+                }
+                myFunction(5);
+
+    Thông số phần còn lại chức năng
+        Tham số còn lại (...) cho phép một hàm coi số lượng đối số không xác định là một mảng:
+            VD:
+                function sum(...args) {
+                    let sum = 0;
+                    for (let arg of args) sum += arg;
+                    return sum;
+                    }
+
+                    let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+
+
+    Đối tượng đối số. Nếu hàm khởi tạo không truyền vào gì mà khi gọi hàm mình truyền thì nó mặc định sẽ là 1 "arguments"
+            VD: 
+            function findMax() {
+                let max = -Infinity;
+                for(let i = 0; i < arguments.length; i++) {
+                    if (arguments[i] > max) {
+                    max = arguments[i];
+                    }
+                }
+                return max;
+                } 
+                document.getElementById("demo").innerHTML = findMax(4, 5, 6);
+
+
+
+
+
+
+ -->

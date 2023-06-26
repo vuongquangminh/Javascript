@@ -1,0 +1,53 @@
+<!-- 
+    apply()
+        Phương apply()pháp tương tự như call()phương pháp (chương trước).
+            VD:
+                const person = {
+                    fullName: function() {
+                        return this.firstName + " " + this.lastName;
+                    }
+                    }
+
+                    const person1 = {
+                    firstName: "Mary",
+                    lastName: "Doe"
+                    }
+
+                    // This will return "Mary Doe":
+                    person.fullName.apply(person1);
+
+        Sự khác biệt giữa cuộc gọi () và apply()
+            Phương pháp này call()có các đối số riêng biệt .
+
+            Phương thức apply() lấy đối số như một mảng .
+
+                VD:
+                    const person = {
+                        fullName: function(city, country) {
+                            return this.firstName + " " + this.lastName + "," + city + "," + country;
+                        }
+                        }
+
+                        const person1 = {
+                        firstName:"John",
+                        lastName: "Doe"
+                        }
+
+                        person.fullName.apply(person1, ["Oslo", "Norway"]);
+                    So với call()phương pháp:
+                        person.fullName.call(person1, "Oslo", "Norway");
+
+
+    Ứng dụng Apply()
+
+    Bạn có thể tìm số lớn nhất (trong danh sách các số) bằng Math.max()phương pháp: 
+        Math.max(1,2,3);  // Will return 3
+
+    Vì các mảng JavaScript không có phương thức max(), nên bạn có thể áp dụng Math.max()phương thức này để thay thế.
+        Math.max.apply(null, [1,2,3]); // Will also return 3
+        Đối số đầu tiên (null) không thành vấn đề. Nó không được sử dụng trong ví dụ này.
+    Những ví dụ này sẽ cho kết quả tương tự:
+        Math.max.apply(Math, [1,2,3]); // Will also return 3
+        Math.max.apply(" ", [1,2,3]); // Will also return 3
+        Math.max.apply(0, [1,2,3]); // Will also return 3
+ -->

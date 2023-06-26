@@ -1,0 +1,22 @@
+<!-- 
+    Các biến được tạo không có từ khóa khai báo ( var, let, hoặc const) luôn là biến toàn cục, ngay cả khi chúng được tạo bên trong một hàm.
+
+    Thời gian thay đổi
+        Các biến chung tồn tại cho đến khi trang bị hủy, chẳng hạn như khi bạn điều hướng đến một trang khác hoặc đóng cửa sổ.
+
+        Các biến cục bộ có thời gian sống ngắn. Chúng được tạo khi hàm được gọi và bị xóa khi hàm kết thúc.
+
+
+
+
+    const add = (function () {
+        let counter = 0;
+        return function () {counter += 1; return counter}
+        })();
+
+        add();
+        add();
+        add();
+
+        // the counter is now 3
+ -->

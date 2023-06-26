@@ -1,0 +1,86 @@
+<!-- 
+    Gọi một hàm dưới dạng một hàm
+        VD: 
+            function myFunction(a, b) {
+                return a * b;
+                }
+                myFunction(10, 2); 
+
+        Ghi chú
+            Đây là một cách phổ biến để gọi một hàm JavaScript, nhưng không phải là một cách thực hành tốt.
+            Các biến, phương thức hoặc hàm toàn cầu có thể dễ dàng tạo xung đột tên và lỗi trong đối tượng toàn cục.
+
+            myFunction() và window.myFunction() có cùng chức năng:
+            
+            VD: 
+                function myFunction(a, b) {
+                    return a * b;
+                    }
+                    window.myFunction(10, 2);    // Will also return 20
+
+
+
+
+
+    What is this?
+        Trong JavaScript, thistừ khóa đề cập đến một đối tượng .
+
+        Đối tượng nào phụ thuộc vào cách thisđược gọi (được sử dụng hoặc được gọi).
+
+        Từ khóa this  đề cập đến các đối tượng khác nhau tùy thuộc vào cách nó được sử dụng:
+
+
+        
+            1. Trong một phương thức đối tượng, thisđề cập đến đối tượng .
+            2. Một mình, thisđề cập đến đối tượng toàn cầu .
+            3. Trong một chức năng, thisđề cập đến đối tượng toàn cầu .
+            4. Trong một hàm, ở chế độ nghiêm ngặt, thislà undefined.
+            5. Trong một sự kiện, thisđề cập đến phần tử đã nhận được sự kiện.
+            6. Các phương thức như call(), apply()và bind()có thể tham chiếu thisđến bất kỳ đối tượng nào .
+        Ghi chú
+            this không phải là một biến. Nó là một từ khóa. Bạn không thể thay đổi giá trị của this.
+    
+    Đối tượng Toàn cầu
+        Khi một hàm được gọi mà không có đối tượng chủ sở hữu, giá trị của this sẽ trở thành đối tượng toàn cục.
+
+        Trong trình duyệt web, đối tượng chung là cửa sổ trình duyệt.
+
+        Ví dụ này trả về đối tượng cửa sổ dưới dạng giá trị của this:
+        VD:
+            let x = myFunction();            // x will be the window object
+
+            function myFunction() {
+            return this;
+            }
+
+
+
+    Gọi một hàm như một phương thức
+        Trong JavaScript, bạn có thể định nghĩa hàm dưới dạng phương thức đối tượng.
+
+        Ví dụ sau tạo một đối tượng ( myObject ), với hai thuộc tính ( firstName và lastName ) và một phương thức ( fullName ):
+        VD:
+            const myObject = {
+                firstName:"John",
+                lastName: "Doe",
+                fullName: function () {
+                    return this.firstName + " " + this.lastName;
+                }
+                }
+                myObject.fullName();         // Will return "John Doe"
+
+
+    Invoking a Function with a Function Constructor:
+        VD:
+            // This is a function constructor:
+                function myFunction(arg1, arg2) {
+                this.firstName = arg1;
+                this.lastName  = arg2;
+                }
+
+                // This creates a new object
+                const myObj = new myFunction("John", "Doe");
+
+                // This will return "John"
+                myObj.firstName;
+ -->
