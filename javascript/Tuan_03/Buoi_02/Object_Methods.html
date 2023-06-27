@@ -1,0 +1,35 @@
+<!-- 
+    Phương thức đối tượng JavaScript
+        VD:
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+                };
+
+    Trong JavaScript, thistừ khóa đề cập đến một đối tượng .
+
+    Đối tượng nào phụ thuộc vào cách thisđược gọi (được sử dụng hoặc được gọi).
+
+    Từ this khóa đề cập đến các đối tượng khác nhau tùy thuộc vào cách nó được sử dụng:
+        1.Trong một phương thức đối tượng, thisđề cập đến đối tượng .
+        2.Một mình, thisđề cập đến đối tượng toàn cầu .
+        3.Trong một chức năng, thisđề cập đến đối tượng toàn cầu .
+        4.Trong một hàm, ở chế độ nghiêm ngặt, thislà undefined.
+        5.Trong một sự kiện, thisđề cập đến phần tử đã nhận được sự kiện.
+        6.Các phương thức như call(), apply()và bind()có thể tham chiếu thisđến bất kỳ đối tượng nào .
+
+    Thêm một phương thức vào một đối tượng:
+        VD:
+            person.name = function () {
+                return this.firstName + " " + this.lastName;
+                };
+    Sử dụng các phương thức tích hợp
+        Ví dụ này sử dụng toUpperCase()phương thức của đối tượng String để chuyển đổi văn bản thành chữ hoa:
+
+        let message = "Hello world!";
+        let x = message.toUpperCase();
+ -->

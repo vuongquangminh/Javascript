@@ -1,0 +1,89 @@
+<!-- 
+   Hiển thị một đối tượng JavaScript sẽ xuất ra [object Object] . 
+        VD: 
+            const person = {
+                name: "John",
+                age: 30,
+                city: "New York"
+                };
+
+                document.getElementById("demo").innerHTML = person;
+    
+    Một số giải pháp phổ biến để hiển thị các đối tượng JavaScript là:
+
+        1.Hiển thị thuộc tính đối tượng theo tên
+        2.Hiển thị thuộc tính đối tượng trong vòng lặp
+        3.Hiển thị đối tượng bằng Object.values()
+        4.Hiển thị đối tượng bằng JSON.stringify()
+
+    Hiển thị đối tượng trong vòng lặp:
+        Vd:
+            const person = {
+                name: "John",
+                age: 30,
+                city: "New York"
+                };
+
+                let txt = "";
+                for (let x in person) {
+                txt += person[x] + " ";
+                };
+
+                document.getElementById("demo").innerHTML = txt;
+
+    Bạn phải sử dụng person[x] trong vòng lặp.
+
+    person.x sẽ không hoạt động (Vì x là một biến).
+
+
+    Sử dụng Object.values()
+        Bất kỳ đối tượng JavaScript nào cũng có thể được chuyển đổi thành một mảng bằng cách sử dụng Object.values():
+            VD:
+                const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                    };
+
+                    const myArray = Object.values(person);
+
+                myArraybây giờ là một mảng JavaScript, sẵn sàng để hiển thị:
+    
+
+    Sử dụng JSON.stringify()
+        Bất kỳ đối tượng JavaScript nào cũng có thể được xâu chuỗi (chuyển đổi thành chuỗi) bằng hàm JavaScript JSON.stringify():
+            VD:
+                const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                    };
+
+                    let myString = JSON.stringify(person);      //{"name":"John","age":30,"city":"New York"}
+            
+            VD: Chuỗi ngày
+                JSON.stringifychuyển đổi ngày thành chuỗi:
+                const person = {
+                    name: "John",
+                    today: new Date()
+                    };
+
+                    let myString = JSON.stringify(person);
+                    document.getElementById("demo").innerHTML = myString;      //{"name":"John","today":"2023-06-27T16:40:01.234Z"}
+    
+                    
+    Stringify Functions
+        JSON.stringify will not stringify functions:
+
+
+    Stringify Arrays
+        Cũng có thể xâu chuỗi các mảng JavaScript:
+            VD:
+                const arr = ["John", "Peter", "Sally", "Jane"];
+
+                    let myString = JSON.stringify(arr);
+                    document.getElementById("demo").innerHTML = myString; 
+                    //["John","Peter","Sally","Jane"]
+
+                
+            -->

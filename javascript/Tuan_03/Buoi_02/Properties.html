@@ -1,0 +1,80 @@
+<!-- 
+    Truy cập thuộc tính JavaScript
+    Cú pháp để truy cập thuộc tính của một đối tượng là:
+    VD:
+        objectName.property      // person.age
+        hoặc
+
+        objectName["property"]   // person["age"]
+        hoặc
+
+        objectName[expression]   // x = "age"; person[x]
+
+    Câu lệnh JavaScript for...inlặp qua các thuộc tính của một đối tượng.
+        cú pháp
+            for (let variable in object) {
+            // code to be executed
+            }
+        VD:
+            const person = {
+                fname:" John",
+                lname:" Doe",
+                age: 25
+                };
+
+                for (let x in person) {
+                txt += person[x];
+                }
+    Thêm thuộc tính mới
+        VD:
+            person.nationality = "English";
+
+    Xóa thuộc tính. Từ deletekhóa xóa một thuộc tính khỏi một đối tượng:
+        VD:
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyeColor: "blue"
+                };
+
+                delete person.age;
+
+    Đối tượng lồng nhau:
+        VD:
+            myObj = {
+                name:"John",
+                age:30,
+                cars: {
+                    car1:"Ford",
+                    car2:"BMW",
+                    car3:"Fiat"
+                }
+                }
+
+    Bạn có thể truy cập các đối tượng lồng nhau bằng ký hiệu dấu chấm hoặc ký hiệu dấu ngoặc:
+        VD:
+            myObj.cars.car2;    hoặc:     myObj.cars["car2"];    hoặc:     myObj["cars"]["car2"];
+
+    Mảng và đối tượng lồng nhau:
+        VD:
+            const myObj = {
+                name: "John",
+                age: 30,
+                cars: [
+                    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+                    {name:"BMW", models:["320", "X3", "X5"]},
+                    {name:"Fiat", models:["500", "Panda"]}
+                ]
+                }
+
+    Để truy cập các mảng bên trong các mảng, hãy sử dụng vòng lặp for-in cho mỗi mảng:
+
+        VD:
+            for (let i in myObj.cars) {
+                x += "<h1>" + myObj.cars[i].name + "</h1>";
+                for (let j in myObj.cars[i].models) {
+                    x += myObj.cars[i].models[j];
+                }
+                }
+ -->

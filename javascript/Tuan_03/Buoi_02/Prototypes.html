@@ -1,0 +1,27 @@
+<!-- 
+    Kế thừa nguyên mẫu
+        Tất cả các đối tượng JavaScript kế thừa các thuộc tính và phương thức từ nguyên mẫu:
+
+        Datecác đối tượng kế thừa từDate.prototype
+        Arraycác đối tượng kế thừa từArray.prototype
+        Personcác đối tượng kế thừa từPerson.prototype
+        The Object.prototypenằm trên cùng của chuỗi kế thừa nguyên mẫu:
+
+        Dateđối tượng, Arrayđối tượng và Personđối tượng kế thừa từ Object.prototype.
+
+    Thêm thuộc tính và phương thức vào đối tượng
+        Thuộc tính JavaScript prototypecho phép bạn thêm các thuộc tính mới vào hàm tạo đối tượng:
+        VD:
+            function Person(first, last, age, eyecolor) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eyecolor;
+                }
+
+                Person.prototype.nationality = "English";
+                Person.prototype.name = function() {
+                    return this.firstName + " " + this.lastName;
+                    };
+ 
+    -->

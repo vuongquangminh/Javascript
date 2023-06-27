@@ -1,0 +1,80 @@
+<!-- 
+    Tập hợp JavaScript là tập hợp các giá trị duy nhất.
+
+    Mỗi giá trị chỉ có thể xảy ra một lần trong Tập hợp.
+
+    Một Set có thể chứa bất kỳ giá trị nào của bất kỳ loại dữ liệu nào.
+        Set Methods
+            new Set()	        Creates a new Set
+            add()	            Adds a new element to the Set
+            delete()	        Removes an element from a Set
+            has()	            Returns true if a value exists
+            clear()	            Removes all elements from a Set
+            forEach()	        Invokes a callback for each element
+            values()	        Returns an Iterator with all the values in a Set
+            keys()	            Same as values()
+            entries()	        Returns an Iterator with the [value,value] pairs from a Set
+            Property	        Description
+            size	            Returns the number elements in a Set
+    How to Create a Set
+        1.Passing an Array to new Set()
+        2.Create a new Set and use add() to add values
+        3.Create a new Set and use add() to add variables
+    The new Set() Method
+        VD:
+            const letters = new Set(["a","b","c"]); 
+            letters.size;   // 3
+        VD:
+            // Create a Set
+            const letters = new Set();
+
+            // Add Values to the Set
+            letters.add("a");
+            letters.add("b");
+            letters.add("c");
+
+
+    The forEach() Method
+        VD:
+            // Create a Set
+            const letters = new Set(["a","b","c"]);
+
+            // List all entries
+            let text = "";
+            letters.forEach (function(value) {
+            text += value;
+            })
+
+    Phương thức value()
+        letters.values()   // Returns [object Set Iterator]
+        Bây giờ bạn có thể sử dụng đối tượng Iterator để truy cập các phần tử:
+
+            Ví dụ
+            // Create an Iterator
+            const myIterator = letters.values();
+
+            // List all Values
+            let text = "";
+            for (const entry of myIterator) {
+            text += entry;
+            }
+
+    Phương thức keys()
+        Một Set không có khóa.
+
+        keys()trả về giống như values().
+
+        Điều này làm cho Bộ tương thích với Bản đồ.
+
+        Ví dụ
+        letters.keys()   // Returns [object Set Iterator]
+
+    The entries() Method
+        Một Set không có khóa.
+
+        entries()trả về cặp [giá trị, giá trị] thay vì cặp [khóa, giá trị].
+
+        Điều này làm cho Bộ tương thích với Bản đồ:
+
+
+        -->

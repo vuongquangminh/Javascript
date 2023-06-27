@@ -1,0 +1,34 @@
+<!-- 
+    Trình xây dựng đối tượng JavaScript
+        VD:
+            function Person(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+                }
+
+    Trong ví dụ trên, function Person()là một hàm tạo đối tượng.
+
+    Các đối tượng cùng kiểu được tạo bằng cách gọi hàm khởi tạo với từ newkhóa:
+        VD:
+            const myFather = new Person("John", "Doe", 50, "blue");
+            const myMother = new Person("Sally", "Rally", 48, "green");
+
+
+
+    Thêm thuộc tính vào Constructor
+        Để thêm thuộc tính mới vào hàm tạo, bạn phải thêm thuộc tính đó vào hàm tạo:
+
+            Ví dụ
+            function Person(first, last, age, eyecolor) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eyecolor;
+            this.nationality = "English";
+            }
+
+    Khi goij 1 hàm mà truyền vào thiếu giá trị thì chỗ nào không có giá trị thì đặt kiểu FALSE, còn nếu không đặt thì nó sẽ sắp xêps từ trái qua phải
+    
+ -->
