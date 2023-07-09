@@ -15,6 +15,7 @@
                 
                 if(regex.test(element)) {       // Nếu như có tồn tại cụm từ cần tìm trong chuỗi chính thì:
                     // kiểm tra chỗ nào có phần tử giống thì thanh nó thành thẻ span và thêm css
+
                     const output = element.replace(regex, `<span class = "text-danger">${this.regex}</span>`)
                     // Tạo thẻ con để thêm vào chỗ         app.insertBefore(child, app.firstChild) vì nó bắt phải là 1 node
                     const child = document.createElement("p")
@@ -46,4 +47,8 @@
             document.querySelector('.app').innerHTML = ''
         }
     }
+
+function aa(aa) {
+    
+}
     

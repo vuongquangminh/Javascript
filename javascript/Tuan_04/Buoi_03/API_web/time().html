@@ -1,0 +1,30 @@
+<!-- Tính thời gian thực hiện 1 chức năng
+        console.time("while loop"); đứng ở trước chức năng đó (nơi bắt đầu)
+        console.timeEnd("while loop"); đứng ở cuối chức năng đó (điểm kết thúc)-->
+
+<!-- VD -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Console Object</h1>
+<h2>The time() Method</h2>
+<p>Remember to open the console (Press F12) before you click "Run".</p>
+<p>Test to see which loop is the fastest.</p>
+
+<script>
+console.time("for loop");
+for (let i = 0; i < 1000000; i++) {
+}
+console.timeEnd("for loop");
+
+let i = 0;
+console.time("while loop");   //bắt đầu từ đây và lable để mình biết được đang console chức năng nào
+while (i < 1000000) {
+  i++;
+}
+console.timeEnd("while loop");  // điểm kết thức và lable để mình biết được đang console chức năng nào
+</script>
+
+</body>
+</html>

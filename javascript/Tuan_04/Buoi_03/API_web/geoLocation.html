@@ -1,0 +1,37 @@
+<!-- Nhận kinh độ và vĩ độ thao vị trí người dùng -->
+<!-- 
+    Sự miêu tả
+Thuộc geolocationtính trả về một đối tượng Vị trí địa lý có thể được sử dụng để xác định vị trí của người dùng.
+
+Thuộc geolocationtính chỉ đọc.
+
+Thuộc geolocationtính chỉ khả dụng trong ngữ cảnh an toàn (HTTPS).
+
+Thuộc geolocationtính chỉ khả dụng nếu người dùng phê duyệt nó.
+ -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Navigator Object</h1>
+<h2>The The geolocation Property</h2>
+
+<p id="demo"></p>
+
+<script>
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition);
+} else { 
+  document.getElementById("demo").innerHTML =
+  "Geolocation is not supported by this browser.";
+}
+
+function showPosition(position) {
+  document.getElementById("demo").innerHTML =
+  "Latitude: " + position.coords.latitude + "<br>" +
+  "Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>

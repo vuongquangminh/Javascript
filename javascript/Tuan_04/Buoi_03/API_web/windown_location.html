@@ -1,0 +1,52 @@
+<!-- Đối tượng vị trí cửa sổ
+Đối tượng vị trí chứa thông tin về URL hiện tại.
+
+Đối tượng vị trí là một thuộc tính của đối tượng cửa sổ .
+
+Đối tượng vị trí được truy cập với:
+
+window.locationhoặc chỉlocation -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Location Object</h1>
+<h2>The origin Property</h2>
+
+<p id="demo"></p>
+
+<script>
+let origin = window.location.origin;
+document.getElementById("demo").innerHTML = origin;
+</script>
+
+</body>
+</html>
+
+<!-- 
+Ví dụ
+Tải một tài liệu mới:
+    location.assign("https://www.w3schools.com");
+
+Lấy URL của trang hiện tại:
+    let url = location.href;
+
+Nhận giao thức, tên máy chủ và số cổng của URL:
+    let origin = location.origin;
+
+Trả về giao thức của URL hiện tại:
+    let protocol = location.protocol;
+    
+    The protocol of the URL. Examples:
+    file:
+    ftp:
+    http:
+    https:
+    mailto:
+ -->
+
+
+
+
+
